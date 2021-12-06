@@ -2,8 +2,8 @@
 
 one:
   body: MyText
-  question: 1
+  correct: 
 
 two:
   body: MyText
-  question: 1
+  correct: 
