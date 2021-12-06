@@ -1,3 +1,3 @@
 class Answer < ApplicationRecord
-  belings_to :questions
+  belongs_to :questions
 end
