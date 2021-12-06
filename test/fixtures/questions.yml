@@ -2,8 +2,6 @@
 
 one:
   body: MyText
-  test_id: 1
 
 two:
   body: MyText
-  test_id: 1
