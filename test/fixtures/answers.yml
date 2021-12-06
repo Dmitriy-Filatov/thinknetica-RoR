@@ -2,8 +2,8 @@
 
 one:
   body: MyText
-  correct: 
+  correct: false
 
 two:
   body: MyText
-  correct: 
+  correct: false
