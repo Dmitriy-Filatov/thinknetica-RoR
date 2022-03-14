@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  has_many :tests
+  has_many :tests_users
+  has_many :tests, through: :tests_users
 
-  def returns_a_list_of_all_tests(difficulty_level_value)
-    #that the User passes or has ever passed
-    #at this level of difficulty
+  def returns_a_list_of_all_tests(level_value)
+    tests.where(level_value: level_value)
   end
 end
