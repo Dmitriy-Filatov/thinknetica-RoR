@@ -13,9 +13,9 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Основные понятия', level: 1, presence: true, category_id: categories[0].id },
-  { title: 'Основные понятия', level: 1, presence: true, category_id: categories[1].id },
-  { title: 'Основные понятия', level: 1, presence: true, category_id: categories[2].id }
+  { title: 'Основные понятия', level: 1, category_id: categories[0].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[1].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[2].id }
 ])
 
 questions = Question.create!([
@@ -36,4 +36,4 @@ answers = Answer.create!([
   { body: 'организованная преступная группа', correct: false, question_id: questions[2].id }
 ])
 
-users = User.create!([{ name: 'Имя', email: 'Адрес', password_digest: 'Пароль' }])
+users = User.create!([{ name: 'Имя'}])
