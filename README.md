@@ -8,5 +8,4 @@ test
 question
 answer
 user
-tests_user
-author
+tests_user (joint table)
