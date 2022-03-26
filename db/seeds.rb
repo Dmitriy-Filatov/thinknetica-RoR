@@ -13,9 +13,9 @@ categories = Category.create!([
 ])
 
 tests = Test.create!([
-  { title: 'Основные понятия', level: 1, category_id: categories[0].id },
-  { title: 'Основные понятия', level: 1, category_id: categories[1].id },
-  { title: 'Основные понятия', level: 1, category_id: categories[2].id }
+  { title: 'Основные понятия', level: 1, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[1].id, author_id: users[1].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[2].id, author_id: users[2].id }
 ])
 
 questions = Question.create!([
