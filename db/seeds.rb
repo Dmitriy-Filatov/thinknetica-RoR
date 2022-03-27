@@ -12,10 +12,12 @@ categories = Category.create!([
   { title: 'Терроризм' }
 ])
 
+users = User.create!([{ name: 'Имя'}])
+
 tests = Test.create!([
   { title: 'Основные понятия', level: 1, category_id: categories[0].id, author_id: users[0].id },
-  { title: 'Основные понятия', level: 1, category_id: categories[1].id, author_id: users[1].id },
-  { title: 'Основные понятия', level: 1, category_id: categories[2].id, author_id: users[2].id }
+  { title: 'Основные понятия', level: 1, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[2].id, author_id: users[0].id }
 ])
 
 questions = Question.create!([
@@ -35,5 +37,3 @@ answers = Answer.create!([
           антитеррористическая защищенность объекта', correct: true, question_id: questions[2].id },
   { body: 'организованная преступная группа', correct: false, question_id: questions[2].id }
 ])
-
-users = User.create!([{ name: 'Имя'}])
