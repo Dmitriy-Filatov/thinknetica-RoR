@@ -12,28 +12,28 @@ categories = Category.create!([
   { title: 'Терроризм' }
 ])
 
+users = User.create!([{ name: 'Имя'}])
+
 tests = Test.create!([
-  { title: 'Основные понятия', level: 1, presence: true, category_id: categories[1].id },
-  { title: 'Основные понятия', level: 1, presence: true, category_id: categories[2].id },
-  { title: 'Основные понятия', level: 1, presence: true, category_id: categories[3].id }
+  { title: 'Основные понятия', level: 1, category_id: categories[0].id, user_id: users[0].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[1].id, user_id: users[0].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[2].id, user_id: users[0].id }
 ])
 
 questions = Question.create!([
-  { body: 'Какие формы публичных мероприятий предусмотрены 54-ФЗ?', test_id: tests[1].id },
-  { body: 'Что входит в основные понятия 114-ФЗ?', test_id: tests[2].id },
-  { body: 'Что входит в основные понятия 35-ФЗ?', test_id: tests[3].id }
+  { body: 'Какие формы публичных мероприятий предусмотрены 54-ФЗ?', test_id: tests[0].id },
+  { body: 'Что входит в основные понятия 114-ФЗ?', test_id: tests[1].id },
+  { body: 'Что входит в основные понятия 35-ФЗ?', test_id: tests[2].id }
 ])
 
 answers = Answer.create!([
-  { body: 'митинг, демонстрация, шествие, пикетирование', correct: true, question_id: questions[1].id },
-  { body: 'общее собрание жителей мкд', correct: false, question_id: questions[1].id },
+  { body: 'митинг, демонстрация, шествие, пикетирование', correct: true, question_id: questions[0].id },
+  { body: 'общее собрание жителей мкд', correct: false, question_id: questions[0].id },
   { body: 'экстремизм, экстремистская организация, экстремистские материалы,
-          символика экстремистской организации', correct: true, question_id: questions[2].id },
-  { body: 'преступное сообщество', correct: false, question_id: questions[2].id },
+          символика экстремистской организации', correct: true, question_id: questions[1].id },
+  { body: 'преступное сообщество', correct: false, question_id: questions[1].id },
   { body: 'терроризм,террористическая деятельность, террористический акт,
           противодействие терроризму, контртеррористическая операция,
-          антитеррористическая защищенность объекта', correct: true, question_id: questions[3].id },
-  { body: 'организованная преступная группа', correct: false, question_id: questions[3].id }
+          антитеррористическая защищенность объекта', correct: true, question_id: questions[2].id },
+  { body: 'организованная преступная группа', correct: false, question_id: questions[2].id }
 ])
-
-users = User.create!([{ name: 'Имя', email: 'Адрес', password_digest: 'Пароль' }])
