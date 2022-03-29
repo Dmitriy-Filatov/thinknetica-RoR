@@ -23,3 +23,8 @@ INSTRUCTION MANUAL
 * ER Diagramm:
 
 https://github.com/Dmitriy-Filatov/thinknetica-RoR/wiki/ER-Diagramm
+
+In the center of the system are the tests with questions and answers.
+Two groups of users interact with the tests.
+Users from the first group can choose tests and pass them.
+Users from the second group (admins, authors) can create and manage tests.
