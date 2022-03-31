@@ -5,9 +5,14 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  def self.returns_array_of_titles_of_all_tests(category_name)
-    joins(:category)
-      .where(category: { title: category_name })
-      .order(title: :desc).pluck(:title)
+  scope :easy, -> { where(level: 0..1) }
+
+  scope :easy, -> { where(level: 0..1) }
+  scope :middle, -> { where(level: 2..4) }
+  scope :hard, -> { where(level: 5..Float::INFINITY) }
+  scope :get_categories_by_title, ->(title) { joins(:category).where(category: { title: title }).order(title: :asc).pluck(:title) }
+
+  def self.returns_array_of_titles_of_all_tests_by_category_title(title)
+    get_categories_by_title(title)
   end
 end
