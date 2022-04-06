@@ -12,7 +12,7 @@ categories = Category.create!([
   { title: 'Терроризм' }
 ])
 
-users = User.create!([{ name: 'Имя'}])
+users = User.create!([{ name: 'Имя', email: 'email' }])
 
 tests = Test.create!([
   { title: 'Основные понятия', level: 1, category_id: categories[0].id, user_id: users[0].id },
