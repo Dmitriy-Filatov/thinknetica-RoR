@@ -9,4 +9,3 @@ class User < ApplicationRecord
     tests.where(level_value: level_value)
   end
 end
-  
