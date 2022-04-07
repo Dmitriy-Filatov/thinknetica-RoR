@@ -5,9 +5,12 @@ class Test < ApplicationRecord
   has_many :tests_users
   has_many :users, through: :tests_users
 
-  validates :title, presence: true
   validates :level, numericality: { only_integer: true, greater_than: 0 }
-  validates :title, uniqueness: { scope: :level, case_sensitive: false, message: 'already exists' }
+  validates :title, presence: true, uniqueness: {
+    scope: %i[level category],
+    case_sensitive: false,
+    message: 'already exists'
+  }
 
   scope :easy, -> { where(level: 0..1) }
   scope :middle, -> { where(level: 2..4) }
