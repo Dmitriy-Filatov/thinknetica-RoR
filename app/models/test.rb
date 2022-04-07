@@ -12,7 +12,7 @@ class Test < ApplicationRecord
     message: 'already exists'
   }
 
-  scope :easy, -> { where(level: 0..1) }
+  scope :easy, -> { level(0..1) }
   scope :middle, -> { where(level: 2..4) }
   scope :hard, -> { where(level: 5..Float::INFINITY) }
   scope :level, ->(level) { where(level: level) }
