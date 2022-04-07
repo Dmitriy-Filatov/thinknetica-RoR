@@ -18,7 +18,7 @@ class Test < ApplicationRecord
   scope :level, ->(level) { where(level: level) }
   scope :get_categories_by_title, ->(title) { joins(:category).where(category: { title: title }).order(title: :desc) }
 
-  def self.returns_array_of_titles_of_all_tests_by_category_title(title)
+  def self.titles_of_all_tests_by_category_title(title)
     get_categories_by_title(title).pluck(:title)
   end
 end
