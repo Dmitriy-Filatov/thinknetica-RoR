@@ -1,5 +1,5 @@
-class AddCompositeTitleLevelIndexInTestTable < ActiveRecord::Migration[6.1]
+class AddCompositeTitleLevelCategoryIDIndexInTestTable < ActiveRecord::Migration[6.1]
   def change
-    add_index :tests, %i[title level], unique: true
+    add_index :tests, %i[title level category_id], unique: true
   end
 end
