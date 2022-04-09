@@ -1,5 +1,5 @@
 
-Test-Guru app
+Test-Guru application
 
 INSTRUCTION MANUAL
 
