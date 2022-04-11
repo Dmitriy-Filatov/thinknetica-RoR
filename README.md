@@ -29,4 +29,6 @@ Two groups of users interact with the tests.
 Users from the first group can choose tests and pass them.
 Users from the second group (admins) can create and manage tests.
 
-Attention!
+* Technical characteristics
+
+The application is based on the MVC pattern.
