@@ -16,12 +16,24 @@ users = User.create!([{ name: 'Имя', email: 'email' }])
 
 tests = Test.create!([
   { title: 'Основные понятия', level: 1, category_id: categories[0].id, user_id: users[0].id },
+  { title: 'Организация и проведение', level: 2, category_id: categories[0].id, user_id: users[0].id },
+  { title: '', level: 3, category_id: categories[0].id, user_id: users[0].id },
+  { title: '', level: 4, category_id: categories[0].id, user_id: users[0].id },
   { title: 'Основные понятия', level: 1, category_id: categories[1].id, user_id: users[0].id },
-  { title: 'Основные понятия', level: 1, category_id: categories[2].id, user_id: users[0].id }
+  { title: '', level: 2, category_id: categories[1].id, user_id: users[0].id },
+  { title: '', level: 3, category_id: categories[1].id, user_id: users[0].id },
+  { title: '', level: 4, category_id: categories[1].id, user_id: users[0].id },
+  { title: 'Основные понятия', level: 1, category_id: categories[2].id, user_id: users[0].id },
+  { title: '', level: 2, category_id: categories[2].id, user_id: users[0].id },
+  { title: '', level: 3, category_id: categories[2].id, user_id: users[0].id },
+  { title: '', level: 4, category_id: categories[2].id, user_id: users[0].id },
 ])
 
 questions = Question.create!([
   { body: 'Какие формы публичных мероприятий предусмотрены 54-ФЗ?', test_id: tests[0].id },
+{ body: 'К организации публичного мероприятия относятся:', test_id: tests[0].id },
+{ body: '', test_id: tests[0].id },
+{ body: '?', test_id: tests[0].id },
   { body: 'Что входит в основные понятия 114-ФЗ?', test_id: tests[1].id },
   { body: 'Что входит в основные понятия 35-ФЗ?', test_id: tests[2].id }
 ])
