@@ -1,5 +1,5 @@
 
-Test-Guru app
+Test-Guru application
 
 INSTRUCTION MANUAL
 
@@ -28,3 +28,7 @@ In the center of the system are the tests with questions and answers.
 Two groups of users interact with the tests.
 Users from the first group can choose tests and pass them.
 Users from the second group (admins) can create and manage tests.
+
+* Technical characteristics
+
+The application is based on the MVC pattern and REST architecture.
