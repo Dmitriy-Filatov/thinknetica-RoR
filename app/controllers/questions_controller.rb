@@ -4,7 +4,11 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def show; end
+  def show
+  @question = Question.find(params[:id])
+  end
+
+  def new; end
 
   def index
     @questions = @test.questions
@@ -14,9 +18,10 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    question = Question.create(question_params)
+    #byebug
 
-    render plain: question.inspect
+    question = Question.create(question_params)
+    @question_id = question.id
   end
 
   def destroy
@@ -37,7 +42,7 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body)
+    params.require(:question).permit(:body).to_h.merge(test_id: params[:test_id])
   end
 
   def rescue_with_question_not_found
