@@ -4,11 +4,7 @@ class QuestionsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def show
-  @question = Question.find(params[:id])
-  end
-
-  def new; end
+  # 'R' (Read) of CRUD
 
   def index
     @questions = @test.questions
@@ -17,12 +13,24 @@ class QuestionsController < ApplicationController
     # render inline: '<%= @questions.inspect %>'
   end
 
-  def create
-    #byebug
+  def show
+  @question = Question.find(params[:id])
+  end
 
+  # 'C' (Create) of CRUD
+
+  def new; end
+
+  def create
     question = Question.create(question_params)
     @question_id = question.id
   end
+
+  # 'U' (Update) of CRUD
+
+
+
+  # 'D' (Delete) of CRUD
 
   def destroy
     @question.destroy
