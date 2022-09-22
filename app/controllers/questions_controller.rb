@@ -5,7 +5,6 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   # 'R' (Read) of CRUD
-
   def index
     @questions = @test.questions
 
@@ -18,7 +17,6 @@ class QuestionsController < ApplicationController
   end
 
   # 'C' (Create) of CRUD
-
   def new; end
 
   def create
@@ -27,7 +25,9 @@ class QuestionsController < ApplicationController
   end
 
   # 'U' (Update) of CRUD
-
+  def edit
+    @question = Quetion.find(params[:id])
+  end
 
 
   # 'D' (Delete) of CRUD
