@@ -13,7 +13,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-  @question = Question.find(params[:id])
+    @question = Question.find(params[:id])
   end
 
   # 'C' (Create) of CRUD
@@ -26,9 +26,18 @@ class QuestionsController < ApplicationController
 
   # 'U' (Update) of CRUD
   def edit
-    @question = Quetion.find(question_params[:id])
+    @question = Question.find(question_params[:id])
   end
 
+  def update
+    @question = Question.find(params[:id])
+
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
 
   # 'D' (Delete) of CRUD
 
