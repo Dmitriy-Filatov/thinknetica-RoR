@@ -40,12 +40,10 @@ class QuestionsController < ApplicationController
   end
 
   # 'D' (Delete) of CRUD
-
   def destroy
     @question.destroy
-
+    redirect_to root_path
     render plain: 'The question has been deleted.'
-    # render html: '<h1>The question has been deleted.</h1>'.html_safe
   end
 
   private
