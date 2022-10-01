@@ -25,9 +25,7 @@ class QuestionsController < ApplicationController
   end
 
   # 'U' (Update) of CRUD
-  def edit
-    @question = Question.find(question_params[:id])
-  end
+  def edit; end
 
   def update
     @question = Question.find(params[:id])
