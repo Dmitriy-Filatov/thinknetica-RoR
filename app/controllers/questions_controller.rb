@@ -7,7 +7,6 @@ class QuestionsController < ApplicationController
   # 'R' (Read) of CRUD
   def index
     @questions = @test.questions
-
     render plain: @questions.inspect
     # render inline: '<%= @questions.inspect %>'
   end
@@ -17,11 +16,18 @@ class QuestionsController < ApplicationController
   end
 
   # 'C' (Create) of CRUD
-  def new; end
+  def new
+    @question = @test.questions.new
+  end
 
   def create
-    question = Question.create(question_params)
-    @question_id = question.id
+    @question = @test.questions.new(question_params)
+
+    if @question.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   # 'U' (Update) of CRUD
@@ -41,7 +47,6 @@ class QuestionsController < ApplicationController
   def destroy
     @question.destroy
     redirect_to root_path
-    render plain: 'The question has been deleted.'
   end
 
   private
