@@ -8,3 +8,18 @@
   <strong>Level:</strong>
   <%= @test.level %>
 </p>
+
+<p>
+  <strong>Questions:</strong>
+  <% @test.questions.each do |question| %>
+    <ul><i><%= question.body %></i></ul>
+  <% end %>
+</p>
+
+<p>
+  <%= link_to 'Delete',
+              test_path(@test),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Back', tests_path %>
+</p>
