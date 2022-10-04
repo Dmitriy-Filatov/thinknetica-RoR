@@ -11,9 +11,7 @@ class QuestionsController < ApplicationController
     # render inline: '<%= @questions.inspect %>'
   end
 
-  def show
-    @question = Question.find(params[:id])
-  end
+  def show; end
 
   # 'C' (Create) of CRUD
   def new
