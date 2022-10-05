@@ -1,15 +1,5 @@
-<h1> Create New Test </h1>
+<h1>Create new Test</h1>
 
-<%= form_with model: @test do |form| %>
-  <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-  </p><br>
+<%= render 'form' %>
 
-  <p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level %>
-  </p><br>
-
-  <p><%= form.submit %></p>
-<% end %>
+<p><%= link_to 'Back', tests_path %></p>
