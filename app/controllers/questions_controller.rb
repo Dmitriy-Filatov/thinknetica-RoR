@@ -1,34 +1,43 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create new]
-  before_action :find_question, only: %i[show destroy]
+  before_action :find_test, only: %i[new create]
+  before_action :find_question, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def show
-  @question = Question.find(params[:id])
-  end
+  # 'R' (Read) of CRUD
 
-  def new; end
+  def show; end
 
-  def index
-    @questions = @test.questions
-
-    render plain: @questions.inspect
-    # render inline: '<%= @questions.inspect %>'
+  # 'C' (Create) of CRUD
+  def new
+    @question = @test.questions.new
   end
 
   def create
-    #byebug
+    @question = @test.questions.new(question_params)
 
-    question = Question.create(question_params)
-    @question_id = question.id
+    if @question.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
+  # 'U' (Update) of CRUD
+  def edit; end
+
+  def update
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  # 'D' (Delete) of CRUD
   def destroy
     @question.destroy
-
-    render plain: 'The question has been deleted.'
-    # render html: '<h1>The question has been deleted.</h1>'.html_safe
+    redirect_to root_path
   end
 
   private

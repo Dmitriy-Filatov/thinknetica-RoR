@@ -31,4 +31,4 @@ Users from the second group (admins) can create and manage tests.
 
 * Technical characteristics
 
-The application is based on the MVC pattern and REST architecture.
+The application is based on the MVC pattern and REST architecture!
