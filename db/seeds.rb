@@ -31,6 +31,12 @@ tests = Test.create!([
   { title: 'Полномочиям органов исполнительной власти субъектов РФ', level: 4, category_id: categories[2].id, user_id: users[0].id },
 ])
 
+test_passages = TestPassage.create!([
+  { test: tests[0], user: users[0] },
+  { test: tests[1], user: users[1] },
+  { test: tests[2], user: users[2] }
+])
+
 questions = Question.create!([
   { body: 'Какие формы публичных мероприятий предусмотрены 54-ФЗ?', test_id: tests[0].id },
   { body: 'К организации публичного мероприятия относятся:', test_id: tests[0].id },
