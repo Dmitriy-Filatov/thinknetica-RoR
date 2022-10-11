@@ -38,6 +38,12 @@ class TestsController < ApplicationController
     redirect_to tests_path
   end
 
+  def start
+    @test = Test.find(params[:id])
+    @user.tests.push(@test)
+    redirect_to @user.test_passage(@test)
+  end
+
   private
 
   def find_test
