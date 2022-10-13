@@ -11,7 +11,8 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    
+    @test_passage.accept!(params[:answer_ids])
+    render :show
   end
 
   private
