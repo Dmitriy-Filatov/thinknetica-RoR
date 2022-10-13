@@ -1,1 +1,14 @@
-<p>Pass the test</p>
+<p>Passing the <%= @test_passege.test.title Test %> </p>
+
+<b>
+  <%= @test_passege.current_question.body %>
+</b>
+
+<%= form_with url: test_passege_puth(@test_passege), local: true, method: :put do |form| %>
+<%= form.collection_check_boxes :answer_ids, @test_passege.current_question.answers, :id, :body do |b| %>
+  <p>
+    <%= b.check_box id: "answer_ids_#{b.object.id}" %>
+    <%= b.label %>
+  </p>
+  <%= end %>
+<% end %>
