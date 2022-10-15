@@ -1,5 +1,8 @@
 <h1>Passing the test:</h1>
 <h2><%= @test_passage.test.title %></h2>
+
+<p><%= current_question_number(@test_passage) %></p>
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>
