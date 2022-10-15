@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   has_many :users, through: :test_passages
   has_many :questions
   belongs_to :category#, optional: true
-  belongs_to :author, class_name: 'User', foreign_key: :user_id#, optional: true
+  belongs_to :author, class_name: 'User', inverse_of: :created_tests, foreign_key: :author_id#, optional: true
 
   validates :level, numericality: { only_integer: true, greater_than: 0 }
   validates :title, presence: true, uniqueness: {
