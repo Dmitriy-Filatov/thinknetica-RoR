@@ -1,1 +1,11 @@
-<h1>The <%= @test_passage.test.title %> Test was completed!</h1>
+<h1>You passed this test: <u><%= @test_passage.test.title %></u></h1>
+
+<p>
+  <b>This test passage result is:</b>
+  <span class="passage-result <%= success_failure(@test_passage) %>" >
+    <%= @test_passage.percent_result %> %
+    <p><b><u><%= result_message(@test_passage) %></u></b></p>
+  </span>
+</p>
+
+<p><%= link_to 'All tests page', tests_path %></p>
