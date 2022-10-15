@@ -1,9 +1,9 @@
-<h1>You passed this test: <u><%= @test_passage.test.title %></u></h1>
+<h1>You passed this test: <%= @test_passage.test.title %></h1>
 
 <p>
   <b>This test passage result is:</b>
   <span class="passage-result <%= success_failure(@test_passage) %>" >
-    <%= @test_passage.percent_result %> %
+    <%= @test_passage.result_percent %> %
     <p><b><u><%= result_message(@test_passage) %></u></b></p>
   </span>
 </p>
