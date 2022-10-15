@@ -1,7 +1,7 @@
 module TestPassagesHelper
   TEST_PASSAGE = {
-    success: 'You have been completed Test successfully!',
-    failure: 'You have been failed the Test!'
+    success: 'The Test was passed successfully!',
+    failure: 'The Test failed!'
   }.freeze
 
   def result_message(test_passage)
