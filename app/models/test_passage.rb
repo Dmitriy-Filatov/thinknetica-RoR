@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question
 
+  SUCCESSFUL = 85
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
     save!
@@ -27,7 +29,7 @@ class TestPassage < ApplicationRecord
   end
 
   def success?
-    @result_message = result_percent >= 85
+    @result_message = result_percent >= SUCCESSFUL
   end
 
   private
