@@ -1,5 +1,5 @@
 class Test < ApplicationRecord
-  default_scope { order(created_at: :desc) }
+  default_scope { order(created_at: :asc) }
 
   belongs_to :category, optional: true
   belongs_to :author, class_name: 'User', foreign_key: :author_id
