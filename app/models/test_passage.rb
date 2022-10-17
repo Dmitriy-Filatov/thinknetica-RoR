@@ -3,7 +3,7 @@ class TestPassage < ApplicationRecord
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', foreign_key: :current_question_id, optional: true
 
-  before_validation :before_validation_set_current_question
+  before_validation :before_validation_set_next_question
 
   SUCCESSFUL = 85
 
@@ -20,10 +20,6 @@ class TestPassage < ApplicationRecord
     test.questions.count
   end
 
-  def current_question_number
-    test.questions.where('id <= ?', current_question.id).count
-  end
-
   def result_percent
     @correct_questions = correct_questions * 100 / questions_count
   end
@@ -34,8 +30,12 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_validation_set_current_question
-    self.current_question = next_question if test.present?
+  def before_validation_set_next_question
+    self.current_question = if new_record?
+      test.questions.order(:id).first if test.present?
+    else
+      test.questions.order(:id).where('id > ?', current_question.id).first
+    end
   end
 
   def correct_answer?(answer_ids)
@@ -44,13 +44,5 @@ class TestPassage < ApplicationRecord
 
   def correct_answers
     current_question.answers.correct
-  end
-
-  def next_questions
-    current_question.present? ? test.questions.where('id > ?', current_question.id) : test.questions
-  end
-
-  def next_question
-    self.current_question = next_questions.first
   end
 end
