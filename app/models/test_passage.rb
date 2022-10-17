@@ -28,6 +28,10 @@ class TestPassage < ApplicationRecord
     @result_message = result_percent >= SUCCESSFUL
   end
 
+  def current_question_number
+    test.questions.where('id <= ?', current_question.id).count
+  end
+
   private
 
   def before_validation_set_next_question

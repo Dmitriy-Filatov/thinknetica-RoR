@@ -1,11 +1,14 @@
 module TestPassagesHelper
-  TEST_PASSAGE = {
-    success: 'The Test was passed successfully!',
-    failure: 'The Test failed!'
-  }.freeze
+  def result_message
+    if test_passage.success?
+      'The Test was passed successfully!'
+    else
+      'The Test failed!'
+    end
+  end
 
-  def result_message(test_passage)
-    test_passage.success? ? TEST_PASSAGE[:success] : TEST_PASSAGE[:failure]
+  def green_or_red!
+    @test_passage.success? ? 'success' : 'failure'
   end
 
   def question_number(test_passage)
