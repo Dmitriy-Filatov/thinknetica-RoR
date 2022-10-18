@@ -1,14 +1,12 @@
 module TestPassagesHelper
-  def result_message
-    if test_passage.success?
-      'The Test was passed successfully!'
+  def result_color_and_percent_message(result_percent)
+    if @test_passage.success?
+      "<h2 style='color: green'>You answered #{result_percent}% questions.
+      The Test passed successfully!</h2>".html_safe
     else
-      'The Test failed!'
+      "<h2 style='color: red'>You answered #{result_percent}% questions.
+      The Test failed!</h2>".html_safe
     end
-  end
-
-  def green_or_red!
-    @test_passage.success? ? 'success' : 'failure'
   end
 
   def question_number(test_passage)
