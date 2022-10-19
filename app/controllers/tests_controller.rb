@@ -34,8 +34,11 @@ class TestsController < ApplicationController
   end
 
   def destroy
-    @test.destroy
-    redirect_to tests_path, notice: 'Test destroyed.'
+    if @test.destroy
+      redirect_to tests_path, notice: 'Test destroyed.'
+    else
+      redirect_to @test
+    end
   end
 
   def start
