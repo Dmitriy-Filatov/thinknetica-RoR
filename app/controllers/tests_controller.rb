@@ -34,8 +34,11 @@ class TestsController < ApplicationController
   end
 
   def destroy
-    @test.destroy
-    redirect_to tests_path, notice: 'Test destroyed.'
+    if @test.destroy
+      redirect_to tests_path, notice: 'Test destroyed.'
+    else
+      redirect_to @test
+    end
   end
 
   def start
@@ -54,7 +57,7 @@ class TestsController < ApplicationController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :category_id, :user_id)
+    params.require(:test).permit(:title, :level, :category_id, :author_id)
   end
 
   def rescue_with_test_not_found

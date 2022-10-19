@@ -6,27 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+users = User.create!([{ name: 'Иван', email: 'ivan@durak.su' }])
+
 categories = Category.create!([
   { title: 'Публичные мероприятия' },
   { title: 'Экстремизм' },
   { title: 'Терроризм' }
 ])
 
-users = User.create!([{ name: 'Иван', email: 'ivan@durak.su' }])
-
 tests = Test.create!([
-  { title: 'Основные понятия 54-ФЗ', level: 1, category_id: categories[0].id, user_id: users[0].id },
-  { title: 'Организация и проведение публичного мероприятия', level: 2, category_id: categories[0].id, user_id: users[0].id },
-  { title: 'Организатор публичного мероприятия', level: 3, category_id: categories[0].id, user_id: users[0].id },
-  { title: 'Участники публичного мероприятия', level: 4, category_id: categories[0].id, user_id: users[0].id },
-  { title: 'Основные понятия 114-ФЗ', level: 1, category_id: categories[1].id, user_id: users[0].id },
-  { title: 'Основные принципы противодействия', level: 2, category_id: categories[1].id, user_id: users[0].id },
-  { title: 'Основные направления противодействия', level: 3, category_id: categories[1].id, user_id: users[0].id },
-  { title: 'Религиозные тексты', level: 4, category_id: categories[1].id, user_id: users[0].id },
-  { title: 'Основные понятия 35-ФЗ', level: 1, category_id: categories[2].id, user_id: users[0].id },
-  { title: 'Основные принципы противодействия терроризму', level: 2, category_id: categories[2].id, user_id: users[0].id },
-  { title: 'Организационные основы противодействия терроризму', level: 3, category_id: categories[2].id, user_id: users[0].id },
-  { title: 'Полномочиям органов исполнительной власти субъектов РФ', level: 4, category_id: categories[2].id, user_id: users[0].id },
+  { title: 'Основные понятия 54-ФЗ', level: 1, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Организация и проведение публичного мероприятия', level: 2, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Организатор публичного мероприятия', level: 3, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Участники публичного мероприятия', level: 4, category_id: categories[0].id, author_id: users[0].id },
+  { title: 'Основные понятия 114-ФЗ', level: 1, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Основные принципы противодействия', level: 2, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Основные направления противодействия', level: 3, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Религиозные тексты', level: 4, category_id: categories[1].id, author_id: users[0].id },
+  { title: 'Основные понятия 35-ФЗ', level: 1, category_id: categories[2].id, author_id: users[0].id },
+  { title: 'Основные принципы противодействия терроризму', level: 2, category_id: categories[2].id, author_id: users[0].id },
+  { title: 'Организационные основы противодействия терроризму', level: 3, category_id: categories[2].id, author_id: users[0].id },
+  { title: 'Полномочиям органов исполнительной власти субъектов РФ', level: 4, category_id: categories[2].id, author_id: users[0].id },
 ])
 
 questions = Question.create!([
