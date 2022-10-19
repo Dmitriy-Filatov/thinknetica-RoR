@@ -1,12 +1,12 @@
 class Answer < ApplicationRecord
   belongs_to :question
 
-  scope :correct_answer, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   validates :body, presence: true
-  validate :limits_the_range_of_answers, on: %i[create update]
+  validates :validate_max_limit_answers, on: %i[create update]
 
-  def limits_the_range_of_answers
-    errors.add(:question, "too many answers") if question.answers.count >= 4
+  def validate_max_limit_answers
+    errors.add(:question, 'limit is exceeded') unless question.answers.count < 4
   end
 end
