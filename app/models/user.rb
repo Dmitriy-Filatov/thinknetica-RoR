@@ -2,6 +2,13 @@ require 'digest/sha1'
 
 class User < ApplicationRecord
 
+  # Это виртуальные атрибуты.
+  # Они вводятся, так как эти данные должны быть в объекта класса User,
+  # но нет необходимости хранить их в БД.
+
+  attr_reader :password
+  attr_writer :password_confimation
+
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
   has_many :authored_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
@@ -12,14 +19,31 @@ class User < ApplicationRecord
     test_passages.order(id: :desc).find_by(test_id: test)
   end
 
-  #authenticate(password_string) принимает пароль пользователя во время логина
-  #digest вычисляет хэш пароля и сравнивает его
-  #со значением атрибута password_digest, которое хранится в базе.
-  #Для этого используем тернарные выражения. Если эти хэши совпадают,
-  #возвращаем объект self пользователю. Если нет, возвращаем false.
+  # authenticate(password_string) принимает пароль пользователя во время логина
+  # digest вычисляет хэш пароля и сравнивает его
+  # со значением атрибута password_digest, которое хранится в базе.
+  # Для этого используем тернарные выражения. Если эти хэши совпадают,
+  # возвращаем объект self пользователю. Если нет, возвращаем false.
 
   def authenticate(password_string)
     digest(password_string) == self.password_digest ? self : false
+  end
+
+  # При вызове метода устанавливаем переменную экземпляра @password,
+  # в которую поступает значие пароля модели User.
+  # И вычислить значение хэша password_digest с помощью метода digest.
+  # Этот хэш установит в атрибут модели с помощью метода self.
+  # Это хначение при сохранении модели будет записано в БД
+  # (в соответствующую колонку внутри таблицы)
+  # self используется, для установления атрибута модели (а не локальной переменной).
+
+  def password=(password_string)
+    if password_string.nil?
+      self.password_digest = nil
+    elsif password_string.present?
+    @password = password_string
+    self.password_digest = digest(password_string)
+    end
   end
 
   private
