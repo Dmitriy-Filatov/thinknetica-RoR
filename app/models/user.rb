@@ -14,6 +14,8 @@ class User < ApplicationRecord
   has_many :authored_tests, class_name: 'Test', foreign_key: :author_id, dependent: :destroy
 
   validates :email, presence: true, length: { within: 5..40 }
+  validates :password, presence: true, if: proc { |current_user| current_user.password_digest.blank? }
+  validates :password, confirmation: true
 
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test)
@@ -57,7 +59,7 @@ class User < ApplicationRecord
   # haxdigest(string + salt)
 
   def digest(string)
-    Digest::SHA1.haxdigest(string)
+    Digest::SHA1.hexdigest(string)
   end
 
   def returns_a_list_of_all_tests(level_value)
