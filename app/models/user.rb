@@ -22,6 +22,8 @@ class User < ApplicationRecord
     digest(password_string) == self.password_digest ? self : false
   end
 
+  private
+
   # SHA1 алгоритм вычисления, реализуемый с помощью соответствующего класса
   # внутри модуля Digest из стандартной библиотеки руби.
   # Он уже подключен, но для уверенности укажем require 'digest/sha1'
