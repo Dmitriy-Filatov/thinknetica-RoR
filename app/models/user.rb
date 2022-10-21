@@ -2,6 +2,8 @@ require 'digest/sha1'
 
 class User < ApplicationRecord
 
+  include Auth
+
   # Это виртуальные атрибуты.
   # Они вводятся, так как эти данные должны быть в объекта класса User,
   # но нет необходимости хранить их в БД.
