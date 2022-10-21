@@ -3,16 +3,20 @@
 
 module User::Auth
 
+  extend ActiveSupport::Concern
+
   # Это виртуальные атрибуты.
   # Они вводятся, так как эти данные должны быть в объекта класса User,
   # но нет необходимости хранить их в БД.
 
   attr_reader :password
   attr_writer :password_confimation
-  validates :email, presence: true, length: { within: 5..40 }
-
-  validates :password, presence: true, if: proc { |current_user| current_user.password_digest.blank? }
-  validates :password, confirmation: true
+ 
+  included do
+    validates :email, presence: true, length: { within: 5..40 }
+    validates :password, presence: true, if: proc { |current_user| current_user.password_digest.blank? }
+    validates :password, confirmation: true
+  end
 
   # authenticate(password_string) принимает пароль пользователя во время логина
   # digest вычисляет хэш пароля и сравнивает его
