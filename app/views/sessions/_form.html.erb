@@ -1,4 +1,7 @@
 <%= form_with url: sessions_path, local: true do |form| %>
+
+  # this if and code can be moved to halper
+
   <% if flash[:alert] %>
     <%= content_tag :p, flash[:alert], class: 'flash alert' %>
   <% end %>
