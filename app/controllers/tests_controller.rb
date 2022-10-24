@@ -39,7 +39,7 @@ class TestsController < ApplicationController
     if @test.destroy
       redirect_to tests_path, notice: 'Test destroyed.'
     else
-      redirect_to @test
+      redirect_to tests_path
     end
   end
 
