@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  skip_before_action :authenticate_user!
+
   def new; end
 
   def create
@@ -16,6 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to login_path
+    redirect_to login_path, notice: 'You are logout, bye!'
   end
 end
