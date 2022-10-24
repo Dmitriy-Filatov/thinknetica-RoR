@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+  private
+
   def authenticate_user!
     unless current_user
       redirect_to login_path
