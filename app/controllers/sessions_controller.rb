@@ -18,7 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete(:user_id)
-    cookies.delete(:redirect_user)
     redirect_to login_path, notice: 'You are logout, bye!'
   end
 end
