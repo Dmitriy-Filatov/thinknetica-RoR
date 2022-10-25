@@ -1,7 +1,7 @@
 <nav>
   <% if logged_in? %>
     <div>Welcome, <b><%= current_user.name %></b> Guru</div>
-    <div><%= link_to "Sign out", signout_path %></div>
+    <div><%= link_to "Sign out", signout_path, method: :delete %></div>
   <% else %>
     <div>Welcome, to <b><%= link_to "TestGuru", root_path %></b></div>
     <div><%= link_to "Sign in", login_path %></div>
