@@ -17,7 +17,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    session[:user_id] = nil
+    session.delete(:user_id)
+    cookies.delete(:redirect_user)
     redirect_to login_path, notice: 'You are logout, bye!'
   end
 end
