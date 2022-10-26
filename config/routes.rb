@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     sign_in: :login, sign_out: :ligout
   }
 
-  resources :tests do
+  resources :tests, only: :index do
     resources :questions, except: :index, shallow: true do
       resources :answers, except: :index, shallow: true
     end
@@ -16,5 +16,9 @@ Rails.application.routes.draw do
 
   resources :test_passages, only: %i[show update] do
     get :result, on: :member
+  end
+
+  namespace :admin do
+    resources :tests
   end
 end
