@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_10_26_091250) do
+ActiveRecord::Schema.define(version: 2022_10_26_170111) do
 
   create_table "answers", force: :cascade do |t|
     t.text "body", null: false
@@ -60,8 +60,7 @@ ActiveRecord::Schema.define(version: 2022_10_26_091250) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "email", default: "", null: false
+    t.string "email", default: ""
     t.string "password"
     t.string "password_confirmation"
     t.datetime "created_at", precision: 6, null: false
@@ -70,13 +69,22 @@ ActiveRecord::Schema.define(version: 2022_10_26_091250) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.integer "sign_in_count", default: 0, null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.string "type", default: "User", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["type"], name: "index_users_on_type"
   end
 
   add_foreign_key "answers", "questions"
