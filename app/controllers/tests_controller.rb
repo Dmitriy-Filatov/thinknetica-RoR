@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+
   before_action :set_test, only: %i[show edit update destroy start]
   before_action :set_user, only: :start
 
@@ -37,7 +38,7 @@ class TestsController < ApplicationController
     if @test.destroy
       redirect_to tests_path, notice: 'Test destroyed.'
     else
-      redirect_to @test
+      redirect_to tests_path
     end
   end
 
