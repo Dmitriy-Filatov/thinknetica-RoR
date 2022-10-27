@@ -23,6 +23,7 @@
     <%= form.label :user_id %><br>
     <%= form.collection_select :author_id, User.all, :id, :email %>
   </p><br>
+  <% end %>
 
   <p><%= form.submit %></p>
 <% end %>
