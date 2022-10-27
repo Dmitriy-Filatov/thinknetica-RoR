@@ -1,8 +1,8 @@
-<%= form_with model: [@question, @answer], local: true do |form| %>
+<%= form_with model: [:admin, @question, @answer], local: true do |form| %>
 <%= render 'shared/errors', resource: @answer %>
 <p>
   <%= form.lable: body %><br>
-  <%= formf.text_area :body, id: :answer_body, rows: 7, cols: 60 %>
+  <%= formf.text_area :body, id: :answer_body, rows: 7, cols: 80 %>
 </p>
 
 <p>
