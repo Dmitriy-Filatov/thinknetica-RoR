@@ -1,15 +1,11 @@
-class QuestionsController < ApplicationController
-
+class Admin::QuestionsController < Admin::BaseController
   before_action :find_test, only: %i[new create]
   before_action :find_question, only: %i[show edit update destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  # 'R' (Read) of CRUD
-
   def show; end
 
-  # 'C' (Create) of CRUD
   def new
     @question = @test.questions.new
   end
@@ -18,27 +14,25 @@ class QuestionsController < ApplicationController
     @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to root_path
+      redirect_to admin_test_path(@test), notice: 'Question was successfully created!'
     else
       render :new
     end
   end
 
-  # 'U' (Update) of CRUD
   def edit; end
 
   def update
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to admin_question_path(@question), notice: 'Question was successfully updated!'
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
-  # 'D' (Delete) of CRUD
   def destroy
     @question.destroy
-    redirect_to root_path
+    redirect_to admin_test_path(@question.test), notice: 'Question was successfully destroyed!'
   end
 
   private
@@ -52,7 +46,9 @@ class QuestionsController < ApplicationController
   end
 
   def question_params
-    params.require(:question).permit(:body).to_h.merge(test_id: params[:test_id])
+    params.require(:question).permit(:body).to_h.merge(
+      test_id: params[:test_id]
+    )
   end
 
   def rescue_with_question_not_found
