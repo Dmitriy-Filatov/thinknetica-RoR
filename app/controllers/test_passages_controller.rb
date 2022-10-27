@@ -13,7 +13,7 @@ class TestPassagesController < ApplicationController
       TestsMailer.completed_test(@test_passage).deliver_now
       redirect_to result_test_passage_path(@test_passage)
     else
-      redirect_to test_passage_path(@test_passage)
+      render :show
     end
   end
 
