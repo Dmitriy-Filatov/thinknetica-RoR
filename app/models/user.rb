@@ -1,6 +1,4 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable,
          :registerable,
          :recoverable,
@@ -19,5 +17,9 @@ class User < ApplicationRecord
 
   def returns_a_list_of_all_tests(level_value)
     tests.where(level_value: level_value)
+  end
+
+  def admin?
+    is_a?(Admin)
   end
 end
