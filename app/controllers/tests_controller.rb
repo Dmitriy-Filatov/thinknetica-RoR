@@ -1,6 +1,5 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_test, only: :start
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
