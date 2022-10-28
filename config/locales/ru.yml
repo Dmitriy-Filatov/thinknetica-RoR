@@ -1,2 +1,12 @@
 ru:
   hello: 'Привет, мир!'
+
+  tests:
+    index:
+      header: "Доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start_button: "Старт"
