@@ -70,4 +70,4 @@ en:
     sessions:
       create:
         hello: "Hello, %{greeting}!"
-        
+
