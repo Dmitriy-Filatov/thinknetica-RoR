@@ -51,6 +51,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def rescue_with_test_not_found
-    render file: '/Users/dmitriy/Documents/ror/test-guru/public/404.html', layout: false, status: :not_found
+    render file: 'public/404.html', status: :not_found
   end
 end
