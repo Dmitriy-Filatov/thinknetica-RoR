@@ -1,0 +1,23 @@
+<h1>Test: <%= @test.title %></h1>
+
+<p>
+  <strong>Level:</strong>
+  <%= @test.level %>
+</p>
+
+<%= link_to 'New Question', new_admin_test_question_path(@test) %>
+
+<h2>Questions:</h2>
+
+<ol>
+  <%= render @test.questions %>
+</ol>
+
+<p>
+  <%= link_to 'Delete',
+              admin_test_path(@test),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Edit', edit_admin_tests_path(@test) %>
+  <%= link_to 'Back', admin_tests_path %>
+</p>
