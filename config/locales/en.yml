@@ -3,11 +3,70 @@ en:
 
   tests:
     index:
-      header: "Tricky Tests"
+      header: "This is a list of all available tests"
       title: "Title"
       level: "Level"
       questions: "Questions"
       actions: "Actions"
     test:
       start_button: "Start"
-      
+
+  test_passages:
+    show:
+      header: "Passing the Test: %{test_title}"
+      number: "The Question %{current} of %{total}."
+      next_button: 'Next'
+    result:
+      header: "You have been completed the Test: "
+      test_result: "Your Test passage result is:"
+      tests_button: "Main page with Tests"
+      success: "You have been completed the Test successfully!"
+      failure: "You have been failed the Test!"
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        crete: "Create Question"
+        update: "Update Question"
+      answer:
+        crete: "Create Answer"
+        update: "Update Answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category:"
+        author_id: "Author:"
+      question:
+        body: "Question text"
+      answer:
+        body: "Answer text"
+        correct: "Correct?"
+    select:
+      prompt: "Select a category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected:"
+        other: "%{count} errors detected:"
+    header:
+      greeting: "Hello, "
+      main_page: "Test Guru"
+      log_out: "Log out"
+    footer:
+      author: "Author: Dmitriy Filatov | GitHub: "
+      about: "About project: Creating tests, managing and passing them."
+      project_link: "Educational project of the Thinknetica web development online school."
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  users:
+    sessions:
+      create:
+        hello: "Hello, %{greeting}!"
