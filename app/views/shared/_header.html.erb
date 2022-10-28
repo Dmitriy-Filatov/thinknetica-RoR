@@ -1,8 +1,8 @@
 <% if user_signed_in? %>
   <div class="nav user">
-    <p>Welcome, <b class="nav user-email"><%= current_user.first_name || current_user.email %></b> Guru!</p>
+    <%= t('.greeting') %><b class="nav-admin user-email"><%= current_user.first_name || current_user.email %></b>!
 
-    <%= link_to 'Test Guru', root_path %> |
-    <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    <%= link_to t('.main_page'), root_path %> |
+    <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
   </div>
 <% end %>
