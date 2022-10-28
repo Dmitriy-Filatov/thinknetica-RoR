@@ -8,6 +8,6 @@ class Admin::BaseController < ApplicationController
   private
 
   def admin_required!
-    redirect_to root_path, alert: 'Нou cannot view this page due to lack of admin rights' unless current_user.admin?
+    redirect_to root_path, alert: t('.not_authorized') unless current_user.admin?
   end
 end
