@@ -1,23 +1,23 @@
-<h1>Test: <%= @test.title %></h1>
+<h1><%= t('.header', title: @test.title) %></h1>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('.level') %></strong>
   <%= @test.level %>
 </p>
 
-<%= link_to 'New Question', new_admin_test_question_path(@test) %>
+<%= link_to t('.new_question_button'), new_admin_test_question_path(@test) %>
 
-<h2>Questions:</h2>
+<h2><%= t('.questions_title') %></h2>
 
 <ol>
   <%= render @test.questions %>
 </ol>
 
 <p>
-  <%= link_to 'Delete',
+  <%= link_to t('.edit_test_button'), edit_admin_test_path(@test) %>
+  <%= link_to t('.delete_test_button'),
               admin_test_path(@test),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-  <%= link_to 'Edit', edit_admin_tests_path(@test) %>
-  <%= link_to 'Back', admin_tests_path %>
+              data: { confirm: t('.are_you_sure') } %>
+  <%= link_to t('.back_tests_button'), admin_tests_path %>
 </p>

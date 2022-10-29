@@ -1,7 +1,11 @@
-<h1>The Test <%= @test_passage.test.title %> was finished!</h1>
+<h1><%= t('.header') %><u><%= @test_passage.test.title %></u></h1>
 
-<div>
-	<%= result_color_and_percent_message(@test_passage.result_percent) %>
-</div>
+<p>
+  <b><%= t('.test_result') %></b>
+  <span class="passage-result <%= green_red(@test_passage) %>" >
+    <%= @test_passage.result_percent %> %
+    <p><h2><b><u><%= result_message(@test_passage) %></u></b></h2></p>
+  </span>
+</p>
 
-<%= link_to 'All Tests Page', tests_path %>
+<p><%= link_to t('.tests_button'), tests_path %></p>

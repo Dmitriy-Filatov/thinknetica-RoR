@@ -1,33 +1,73 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+
+  tests:
+    index:
+      header: "This is a list of all available tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Actions"
+    test:
+      start_button: "Start"
+
+  test_passages:
+    show:
+      header: "Passing the Test: %{test_title}"
+      number: "The Question %{current} of %{total}."
+      next_button: 'Next'
+    result:
+      header: "You have been completed the Test: "
+      test_result: "Your Test passage result is:"
+      tests_button: "Main page with Tests"
+      success: "You have been completed the Test successfully!"
+      failure: "You have been failed the Test!"
+
+  helpers:
+    submit:
+      test:
+        create: "Create Test"
+        update: "Update Test"
+      question:
+        crete: "Create Question"
+        update: "Update Question"
+      answer:
+        crete: "Create Answer"
+        update: "Update Answer"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category:"
+        author_id: "Author:"
+      question:
+        body: "Question text"
+      answer:
+        body: "Answer text"
+        correct: "Correct?"
+    select:
+      prompt: "Select a category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected:"
+        other: "%{count} errors detected:"
+    header:
+      greeting: "Hello, "
+      main_page: "Test Guru"
+      log_out: "Log out"
+    footer:
+      author: "Author: Dmitriy Filatov | GitHub: "
+      about: "About project: Creating tests, managing and passing them."
+      project_link: "Educational project of the Thinknetica web development online school."
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  users:
+    sessions:
+      create:
+        hello: "Hello, %{greeting}!"
+

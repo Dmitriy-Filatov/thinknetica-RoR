@@ -1,0 +1,74 @@
+ru:
+  hello: 'Привет, мир!'
+
+  tests:
+    index:
+      header: "Все доступные Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start_button: "Старт"
+
+  test_passages:
+    show:
+      header: "Прохождение Теста: %{test_title}"
+      number: "Вопрос %{current} из %{total}."
+      next_button: 'Следующий'
+    result:
+      header: "Вы прошли Тест: "
+      test_result: "Ваш результат:"
+      tests_button: "Главная страница со всеми тестами"
+      success: "Правильно. Тест пройден успешно!"
+      failure: "Неправильно. Тест не пройден!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать Тест"
+        update: "Обновить Тест"
+      question:
+        crete: "Создать Вопрос"
+        update: "Обновить Вопрос"
+      answer:
+        crete: "Создать Ответ"
+        update: "Обновить Ответ"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория:"
+        author_id: "Автор:"
+      question:
+        body: "Текст Вопроса"
+      answer:
+        body: "Текст Ответа"
+        correct: "Верно?"
+    select:
+      prompt: "Выберите категорию"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки:"
+        many: "Обнаружено %{count} ошибок:"
+        one: "Обнаружена %{count} ошибка:"
+        other: "Обнаружено %{count} ошибки:"
+    header:
+      greeting: "Привет, "
+      main_page: "Главная страница"
+      log_out: "Выход"
+    footer:
+      author: "Автор: Филатов Д. | GitHub: "
+      about: "О проекте: Создание тестов, управление ими и их прохождение."
+      project_link: "Учебный проект школы Thinknetica."
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы прошли тест!"
+
+  users:
+    sessions:
+      create:
+        hello: "Привет, %{greeting}!"
