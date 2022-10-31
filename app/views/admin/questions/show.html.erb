@@ -14,10 +14,10 @@
 </ol>
 
 <p>
-  <%= link_to t('.edit_question_button'), edit_admin_question_path(@question) %>
-  <%= link_to t('.delete_question_button'),
+  <%= link_to t('.edit_question_button'), edit_admin_question_path(@question) %> |
+  <%= link_to t('links.delete'),
               admin_test_path(@question),
               method: :delete,
-              data: { confirm: t('.are_you_sure') } %>
-  <%= link_to t('.back_to_qstn_test_button'), admin_test_path(@question.test) %>
+              data: { confirm: t('links.are_you_sure') } %> |
+  <%= link_to t('links.back'), admin_test_path(@question.test) %>
 </p>
