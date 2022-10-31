@@ -1,8 +1,18 @@
-<% if user_signed_in? %>
-  <div class="nav user">
-    <%= t('.greeting') %><b class="nav-admin user-email"><%= current_user.first_name || current_user.email %></b>!
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <span class="navbar-text">
+    <%= link_to t('nav.project_title'), root_path, class: 'navbar-brand' %>
+    <% if current_user&.admin? %>
+      | <%= link_to t('nav.admin_panel'), admin_tests_path, class: 'navbar-brand' %>
+    <% end %>
+  </span>
 
-    <%= link_to t('.main_page'), root_path %> |
-    <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
-  </div>
-<% end %>
+  <span class="navbar-text">
+    <% if user_signed_in? %>
+      <%= t('nav.greeting') %><b><%= greeting_in_header %></b>! |
+      <%= link_to t('links.log_out'), destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to t('links.log_in'), new_user_session_path %> |
+      <%= link_to t('links.sign_up'), new_user_registration_path %>
+    <% end %>
+  </span>
+</nav>
