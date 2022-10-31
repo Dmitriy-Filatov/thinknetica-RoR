@@ -1,9 +1,32 @@
 en:
-  hello: "Hello world"
+  hello: "Welcome!"
+
+  links:
+    show: "Show"
+    edit: "Edit"
+    delete: "Delete"
+    are_you_sure: "Are you sure?"
+    back: "Back"
+    log_in: "Log in"
+    log_out: "Log out"
+    sign_up: "Sign up"
+
+  nav:
+    project_title: "TestGuru"
+    admin_panel: "Admin Panel"
+    greeting: "Hello, "
+
+  warnings:
+    not_authorized: "You are not authorized to view this page."
+
+  users:
+    sessions:
+      create:
+        hello: "Hello, %{greeting}!"
 
   tests:
     index:
-      header: "This is a list of all available tests"
+      header: "Tricky Tests"
       title: "Title"
       level: "Level"
       questions: "Questions"
@@ -53,21 +76,11 @@ en:
       header:
         one: "%{count} error detected:"
         other: "%{count} errors detected:"
-    header:
-      greeting: "Hello, "
-      main_page: "Test Guru"
-      log_out: "Log out"
     footer:
-      author: "Author: Dmitriy Filatov | GitHub: "
-      about: "About project: Creating tests, managing and passing them."
-      project_link: "Educational project of the Thinknetica web development online school."
+      author: "Made by: Dmitriy F. | GitHub: "
+      about: "About project: Creating and passing tests."
+      project_link: "Educational project of the Thinknetica web development online school"
 
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
-
-  users:
-    sessions:
-      create:
-        hello: "Hello, %{greeting}!"
-
