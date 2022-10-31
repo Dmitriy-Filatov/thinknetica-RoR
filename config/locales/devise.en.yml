@@ -1,5 +1,3 @@
-# Additional translations at https://github.com/heartcombo/devise/wiki/I18n
-
 en:
   devise:
     confirmations:
@@ -44,8 +42,17 @@ en:
       signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please follow the link to activate your account."
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirmation link to confirm your new email address."
       updated: "Your account has been updated successfully."
-      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again."
+      updated_but_not_signed_in: "Your account has been updated successfully, but since your password was changed, you need to sign in again"
+      new:
+        sign_up: "Become a Guru"
+        submit: "Create an account"
     sessions:
+      new:
+        sign_in_page_header: "Enter the Guru's Galaxy"
+        enter_email: "Enter email"
+        enter_password: "Enter password"
+        remember_me: "Remember me"
+        enter: "Enter"
       signed_in: "Signed in successfully."
       signed_out: "Signed out successfully."
       already_signed_out: "Signed out successfully."
@@ -63,3 +70,15 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+
+  helpers:
+    submit:
+      user:
+        create: "Create User"
+        update: "Update User"
+    label:
+      user:
+        email: "Email"
+        first_name: "First name"
+        last_name: "Last name"
+        
