@@ -10,6 +10,7 @@ ru:
     log_in: "Вход"
     log_out: "Выход"
     sign_up: "Регистрация"
+    gist: "Ваша сслыка на GitHub Gist"
 
   nav:
     project_title: "TestGuru"
@@ -35,9 +36,13 @@ ru:
       start_button: "Старт"
 
   test_passages:
+    gist:
+      success: 'Gist успешно создан! Перейти: %{url}'
+      failure: 'Во время сохранения gist произошла ошибка!'
     show:
       header: "Прохождение Теста: %{test_title}"
       number: "Вопрос %{current} из %{total}."
+      gist_question: "Отправить в Gist"
       next_button: 'Следующий'
     result:
       header: "Вы прошли Тест: "
@@ -79,11 +84,15 @@ ru:
         one: "Обнаружена %{count} ошибка:"
         other: "Обнаружено %{count} ошибки:"
     footer:
-      author: "Автор: Дмитрий Ф. | GitHub: "
-      about: "О проекте: Создание и прохождение тестов."
+      git_hub_repo: "GitHub: "
+      author: "Автор: Дмитрий Ф."
       project_link: "Учебный проект школы Thinknetica"
 
   tests_mailer:
     completed_test:
       subject: "Вы только что прошли тест на портале TestGuru!"
+
+  services:
+    gist_question_service:
+      description:  "Вопрос из %{test_title} Теста из ресурса TestGuru"
 
