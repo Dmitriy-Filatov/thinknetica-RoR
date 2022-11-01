@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'tests#index'
 
   devise_for :users, path: :gurus,
@@ -10,7 +11,10 @@ Rails.application.routes.draw do
   end
 
   resources :test_passages, only: %i[show update] do
-    get :result, on: :member
+    member do
+      get :result
+      post :gist
+    end
   end
 
   namespace :admin do
@@ -19,5 +23,7 @@ Rails.application.routes.draw do
         resources :answers, shallow: true, except: :index
       end
     end
+
+    resources :gists, only: :index
   end
 end
