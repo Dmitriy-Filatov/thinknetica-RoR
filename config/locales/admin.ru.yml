@@ -1,10 +1,5 @@
 ru:
  admin:
-    nav:
-      panel: "Панель администратора TestGuru"
-      greeting: "Привет, "
-      main_page: "Главная страница"
-      log_out: "Выход"
     tests:
       create:
         test_created: "Тест был успешно создан!"
@@ -19,28 +14,16 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
-        not_authorized: "Вы не авторизированы для просмотра этой страницы."
-      test:
-        show_test_button: "Показать"
-        edit_test_button: "Изменить"
-        delete_test_button: "Удалить"
-        are_you_sure: "Вы уверены?"
       show:
         header: "Тест: %{title}"
         level: "Уровень"
         new_question_button: "Новый Вопрос"
         questions_title: "Вопросы:"
         edit_test_button: "Изменить Тест"
-        delete_test_button: "Удалить"
-        are_you_sure: "Вы уверены?"
-        back_tests_button: "Назад"
-        not_authorized: "Вы не авторизированы для просмотра этой страницы."
       new:
         header: "Создать Новый Тест"
-        back_tests_button: "Назад"
       edit:
         header: "Редактировать Тест: %{title}"
-        back_tests_button: "Назад"
     questions:
       create:
         question_created: "Вопрос был успешно создан!"
@@ -48,29 +31,16 @@ ru:
         question_updated: "Вопрос был успешно обновлен!"
       destroy:
         question_deleted: "Вопрос был успешно удален!"
-      question:
-        show_test_button: "Показать"
-        edit_test_button: "Изменить"
-        delete_test_button: "Удалить"
-        are_you_sure: "Вы уверены?"
       show:
         header: "Вопрос из Теста: %{title}"
         question_label: "Вопрос:"
         new_answer_button: "Новый Ответ"
         answers_label: "Ответы:"
         edit_question_button: "Изменить Вопрос"
-        delete_question_button: "Удалить"
-        are_you_sure: "Вы уверены?"
-        back_to_qstn_test_button: "Назад"
-        not_authorized: "Вы не авторизированы для просмотра этой страницы."
       new:
         header: "Создать Новый Вопрос для Теста: %{test_title}"
-        back_tests_button: "Назад"
       edit:
         header: "Редактировать Вопрос из Теста: %{test_title}"
-        delete_question_button: "Удалить"
-        are_you_sure: "Вы уверены?"
-        back_to_test_qstn: "Назад"
     answers:
       create:
         answer_created: "Ответ был успешно создан!"
@@ -78,21 +48,12 @@ ru:
         answer_updated: "Ответ был успешно обновлен!"
       destroy:
         answer_deleted: "Ответ был успешно удален!"
-      answer:
-        show_answer_button: "Показать"
-        edit_answer_button: "Изменить"
-        delete_answer_button: "Удалить"
-        are_you_sure: "Вы уверены?"
       show:
         header: "Вопрос"
         answer_label: "Ответ:"
         correct_label: "Верно:"
         edit_answer_button: "Изменить Ответ"
-        back_to_question: "Назад"
-        not_authorized: "Вы не авторизированы для просмотра этой страницы."
       new:
         header: "Новый Ответ"
-        back_to_question: "Назад"
       edit:
         header: "Редактировать Ответ"
-        back_to_question: "Назад"

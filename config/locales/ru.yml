@@ -1,9 +1,32 @@
 ru:
-  hello: 'Привет, мир!'
+  hello: "Добро пожаловать!"
+
+  links:
+    show: "Показать"
+    edit: "Изменить"
+    delete: "Удалить"
+    are_you_sure: "Вы уверены?"
+    back: "Назад"
+    log_in: "Вход"
+    log_out: "Выход"
+    sign_up: "Регистрация"
+
+  nav:
+    project_title: "TestGuru"
+    admin_panel: "Панель Администратора"
+    greeting: "Привет, "
+
+  warnings:
+    not_authorized: "Вы не авторизированы для просмотра этой страницы."
+
+  users:
+    sessions:
+      create:
+        hello: "Привет, %{greeting}!"
 
   tests:
     index:
-      header: "Все доступные Тесты"
+      header: "Доступные Тесты"
       title: "Название"
       level: "Уровень"
       questions: "Вопросы"
@@ -18,10 +41,10 @@ ru:
       next_button: 'Следующий'
     result:
       header: "Вы прошли Тест: "
-      test_result: "Ваш результат:"
-      tests_button: "Главная страница со всеми тестами"
-      success: "Правильно. Тест пройден успешно!"
-      failure: "Неправильно. Тест не пройден!"
+      test_result: "Ваш результат прохождения теста:"
+      tests_button: "Главная страница с тестами"
+      success: "Вы прошли Тест успешно!"
+      failure: "Вы провалили Тест!"
 
   helpers:
     submit:
@@ -55,20 +78,12 @@ ru:
         many: "Обнаружено %{count} ошибок:"
         one: "Обнаружена %{count} ошибка:"
         other: "Обнаружено %{count} ошибки:"
-    header:
-      greeting: "Привет, "
-      main_page: "Главная страница"
-      log_out: "Выход"
     footer:
-      author: "Автор: Филатов Д. | GitHub: "
-      about: "О проекте: Создание тестов, управление ими и их прохождение."
-      project_link: "Учебный проект школы Thinknetica."
+      author: "Автор: Дмитрий Ф. | GitHub: "
+      about: "О проекте: Создание и прохождение тестов."
+      project_link: "Учебный проект школы Thinknetica"
 
   tests_mailer:
     completed_test:
-      subject: "Вы прошли тест!"
+      subject: "Вы только что прошли тест на портале TestGuru!"
 
-  users:
-    sessions:
-      create:
-        hello: "Привет, %{greeting}!"

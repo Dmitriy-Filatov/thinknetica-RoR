@@ -12,15 +12,9 @@ class Users::SessionsController < Devise::SessionsController
     flash[:notice] = t('.hello', greeting: name_or_email)
   end
 
-  # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+  private
 
-  # protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_in_params
-  #   devise_parameter_sanitizer.permit(:sign_in, keys: [:attribute])
-  # end
+  def name_or_email
+    current_user.first_name || current_user.email
+  end
 end

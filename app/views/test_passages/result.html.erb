@@ -1,11 +1,17 @@
-<h1><%= t('.header') %><u><%= @test_passage.test.title %></u></h1>
+<div class="row justify-content-center mt-3">
+  <div class="card">
+    <div class="card-header">
+      <h2><%= t('.header') %><u><%= @test_passage.test.title %></u></h2>
+    </div>
 
-<p>
-  <b><%= t('.test_result') %></b>
-  <span class="passage-result <%= green_red(@test_passage) %>" >
-    <%= @test_passage.result_percent %> %
-    <p><h2><b><u><%= result_message(@test_passage) %></u></b></h2></p>
-  </span>
-</p>
+    <div class="card-body">
+      <b><%= t('.test_result') %></b>
+      <span class="passage-result <%= green_red(@test_passage) %>">
+        <%= @test_passage.result_percent %> %
+        <p><h3><b><u><%= result_message(@test_passage) %></u></b></h3></p>
+      </span>
 
-<p><%= link_to t('.tests_button'), tests_path %></p>
+      <p><%= link_to t('.tests_button'), tests_path, class: 'btn btn-primary' %></p>
+    </div>
+  </div>
+</div>

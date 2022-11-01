@@ -3,9 +3,9 @@
 <%= render 'form' %>
 
 <p>
-  <%= link_to t('.delete_question_button'),
+  <%= link_to t('links.delete'),
               admin_question_path(@question),
               method: :delete,
-              data: { confirm: t('.are_you_sure') } %>
-  <%= link_to t('.back_to_test_qstn'), admin_test_path(@question.test) %>
+              data: { confirm: t('links.are_you_sure') } %> |
+  <%= link_to t('links.back'), admin_test_path(@question.test) %>
 </p>

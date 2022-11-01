@@ -7,15 +7,6 @@ ru:
       user: "Пользователь"
       admin: "Администратор"
       category: "Категория"
-    # attributes:
-    #   test:
-    #     title: "Название"
-    #     author: "Автор"
-    #   question:
-    #     body: "Текст вопроса"
-    #   answer:
-    #     body: "Текст ответа"
-    #     correct: "Верно?"
       user:
         first_name: "Имя"
         last_name: "Фамилия"
@@ -26,4 +17,3 @@ ru:
       messages:
         blank: "не может быть пустым"
         required: "должно быть заполнено"
-
