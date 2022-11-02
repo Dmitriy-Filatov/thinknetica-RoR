@@ -86,7 +86,7 @@ ru:
     footer:
       git_hub_repo: "GitHub: "
       author: "Автор: Дмитрий Ф."
-      project_link: "Учебный проект школы Thinknetica"
+      project_link: "Тренировочный проект от школы Thinknetica"
 
   tests_mailer:
     completed_test:
@@ -95,4 +95,3 @@ ru:
   services:
     gist_question_service:
       description:  "Вопрос из %{test_title} Теста из ресурса TestGuru"
-
