@@ -52,6 +52,9 @@ gem 'bootsnap', '>= 1.4.4', require: false
 # NETWORKING: HTTP/REST API client library
 gem 'faraday', '~> 1.0'
 
+# GitHub Octokit: Ruby toolkit for the GitHub API
+gem "octokit", '~> 4.0'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
