@@ -3,7 +3,7 @@ class GistQuestionService
     delegate :html_url, to: :service_result, allow_nil: true
 
     def success?
-      service_result&.html_url.present?
+      @client.client.last_response.status == 201
     end
   end
 
