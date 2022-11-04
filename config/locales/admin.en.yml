@@ -14,6 +14,7 @@ en:
         level: "Level"
         questions: "Questions"
         actions: "Actions"
+        gists_list: "Gists of users"
       show:
         header: "Test: %{title}"
         level: "Level"
@@ -57,3 +58,9 @@ en:
         header: "New Answer"
       edit:
         header: "Editing Answer"
+    gists:
+      index:
+        header: "Gists of users"
+        gist_question: "The Question from the Test"
+        gist_link: "Link to GitHub Gist"
+        gist_author: "The Author of Gist"

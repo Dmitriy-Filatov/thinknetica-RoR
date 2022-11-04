@@ -1,7 +1,7 @@
-<footer style=" line-height: 0.8em; width: 100%; text-align: center; position: absolute; left: 0; bottom: 0;">
-  <p><%= t('.author') %> <%= github_url('Dmitriy-Filatov', 'thinknetica-RoR') %> | <%= current_year %></p>
-  <p>
-    <%= t('.about') %> |
+<footer class="blockquote-footer" style=" width: 100%; text-align: center; position: absolute; left: 0; bottom: 0;">
+  <div><%= t('.git_hub_repo') %><%= github_url('Dmitriy-Filatov', 'thinknetica-RoR') %> | <%= current_year %></div>
+  <div>
+    <%= t('.author') %> |
     <%= link_to t('.project_link'), 'https://thinknetica.com', target: '_blank' %>
-  </p>
+  </div>
 </footer>

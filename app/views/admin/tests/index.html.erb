@@ -2,7 +2,10 @@
   <div class="col col-md-12">
     <h1><%= t('.header') %></h1>
 
-    <p><%= link_to t('.new_test_button'), new_admin_test_path, class: 'btn btn-success' %></p>
+    <p>
+      <%= link_to t('.new_test_button'), new_admin_test_path, class: 'btn btn-success' %>
+      <%= link_to t('.gists_list'), admin_gists_path, class: 'btn btn-info' %>
+    </p>
 
     <table class="table" style="text-align: center">
       <thead class="thead-light">
@@ -16,6 +19,5 @@
 
       <%= render @tests %>
     </table>
-    </div>
   </div>
 </div>

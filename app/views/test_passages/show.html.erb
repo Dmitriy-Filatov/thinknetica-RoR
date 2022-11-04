@@ -6,7 +6,9 @@
 
     <p class="card-text ml-2"><%= t('.number', current: @test_passage.current_question_number, total: @test_passage.questions_count) %></p>
 
-    <b class="card-text ml-2"><%= @test_passage.current_question.body %></b>
+    <p>
+      <b class="card-text ml-2"><%= @test_passage.current_question.body %></b>
+    </p>
 
     <div class="card-body">
       <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
@@ -18,8 +20,8 @@
         <% end %>
 
         <p><%= form.submit t('.next_button'), class: 'btn btn-primary' %></p>
+        <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-info' %></p>
       <% end %>
     </div>
-
   </div>
 </div>

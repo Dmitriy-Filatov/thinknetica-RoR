@@ -1,0 +1,19 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-12">
+    <h2><%= t('.header') %></h2>
+
+    <p><%= link_to t('links.back'), admin_tests_path, class: 'btn btn-primary' %></p>
+
+    <table class="table" style="text-align: center">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"><%= t('.gist_question') %></th>
+          <th scope="col"><%= t('.gist_link') %></th>
+          <th scope="col"><%= t('.gist_author') %></th>
+        </tr>
+      </thead>
+
+      <%= render @gists %>
+    </table>
+  </div>
+</div>

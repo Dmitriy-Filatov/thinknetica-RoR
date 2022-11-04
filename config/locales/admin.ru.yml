@@ -14,6 +14,7 @@ ru:
         level: "Уровень"
         questions: "Вопросы"
         actions: "Действия"
+        gists_list: "Gists пользователей"
       show:
         header: "Тест: %{title}"
         level: "Уровень"
@@ -57,3 +58,9 @@ ru:
         header: "Новый Ответ"
       edit:
         header: "Редактировать Ответ"
+    gists:
+      index:
+          header: "Gists пользователей"
+          gist_question: "Вопрос из Теста"
+          gist_link: "Ссылка на GitHub Gist"
+          gist_author: "Автор Gist"
