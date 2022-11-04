@@ -1,6 +1,4 @@
-<h1><%= test_header(@test) %></h1>
-
-<%= form_with model: [admin: @test], local: true do |form| %>
+<%= form_with model: [:admin, @test], local: true do |form| %>
   <%= render 'shared/errors', resource: @test %>
 
   <p>
@@ -14,15 +12,15 @@
   </p><br>
 
   <p>
-    <%= form.label :category_id %><br>
+    <%= form.label :category_id %>
     <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
   </p><br>
 
-    <% if @test.persisted? %>
-  <p>
-    <%= form.label :user_id %><br>
-    <%= form.collection_select :author_id, User.all, :id, :email %>
-  </p><br>
+  <% if @test.persisted? %>
+    <p>
+      <%= form.label :author_id %>
+      <%= form.collection_select :author_id, User.all, :id, :email, prompt: true %>
+    </p><br>
   <% end %>
 
   <p><%= form.submit %></p>
