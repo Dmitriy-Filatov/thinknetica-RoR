@@ -1,6 +1,13 @@
 ru:
   hello: "Добро пожаловать!"
 
+  data:
+    email: 'Электронная почта'
+    first_name: 'Имя'
+    last_name: 'Фамилия'
+    password: 'Пароль'
+    password_confirmation: 'Подтверждение пароля'
+
   links:
     show: "Показать"
     edit: "Изменить"
