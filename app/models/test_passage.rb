@@ -32,6 +32,10 @@ class TestPassage < ApplicationRecord
     test.questions.where('id <= ?', current_question.id).count
   end
 
+  def passage_progress
+    100 / questions_count * (current_question_number - 1)
+  end
+
   private
 
   def before_validation_set_next_question
