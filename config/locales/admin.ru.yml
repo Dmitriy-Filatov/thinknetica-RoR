@@ -25,6 +25,8 @@ ru:
         header: "Создать Новый Тест"
       edit:
         header: "Редактировать Тест: %{title}"
+      form_inline:
+        submit: 'Принять'
     questions:
       create:
         question_created: "Вопрос был успешно создан!"
