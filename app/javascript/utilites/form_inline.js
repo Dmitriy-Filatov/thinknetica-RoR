@@ -48,4 +48,3 @@ function formInlinekHandler(testId) {
     link.textContent = 'Edit'
   }
 }
-     
