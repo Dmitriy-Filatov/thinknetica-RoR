@@ -12,7 +12,8 @@ import "popper"
 import "bootstrap"
 import "../utilities/sorting.js"
 import "../utilities/password_confirmation.js"
-
+import "../utilities/form_inline.js"
+import "../utilities/progress_bar.js"
 
 Rails.start()
 Turbolinks.start()
