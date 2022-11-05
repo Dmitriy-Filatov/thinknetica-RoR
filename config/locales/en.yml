@@ -1,6 +1,13 @@
 en:
   hello: "Welcome!"
 
+  data:
+    email: 'Email'
+    first_name: 'First name'
+    last_name: 'Last name'
+    password: 'Password'
+    password_confirmation: 'Confirm your password'
+
   links:
     show: "Show"
     edit: "Edit"

@@ -10,6 +10,8 @@ import "channels"
 import "jquery"
 import "popper"
 import "bootstrap"
+import "../utilities/sorting.js"
+import "../utilities/password_confirmation.js"
 
 
 Rails.start()

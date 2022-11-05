@@ -1,7 +1,8 @@
 .flash {
-  border: 1px solid;
-  padding: 10 px;
+  border: 2px solid;
+  padding: 10px;
   border-radius: 5px;
+  display: inline-block;
 }
 
 .flash.notice {
@@ -9,5 +10,5 @@
 }
 
 .flash.alert {
-  border-color: #ff0000;
+  border-color: #ef2727;
 }
