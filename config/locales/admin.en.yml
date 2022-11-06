@@ -25,6 +25,8 @@ en:
         header: "Create New Test"
       edit:
         header: "Edit Test: %{title}"
+      form_inline:
+        submit: 'Accept'
     questions:
       create:
         question_created: "Question was successfully created!"

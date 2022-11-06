@@ -4,7 +4,9 @@
       <h1><%= t('.header', test_title: @test_passage.test.title) %></h1>
     </div>
 
-    <p class="card-text ml-2"><%= t('.number', current: @test_passage.current_question_number, total: @test_passage.questions_count) %></p>
+    <p class="card-text ml-2">
+      <%= t('.number', current: @test_passage.current_question_number, total: @test_passage.questions_count) %>
+    </p>
 
     <p>
       <b class="card-text ml-2"><%= @test_passage.current_question.body %></b>
@@ -23,5 +25,11 @@
         <p><%= link_to t('.gist_question'), gist_test_passage_path(@test_passage), method: :post, class: 'btn btn-info' %></p>
       <% end %>
     </div>
+
+    <%= content_tag :div, class: 'progress test-passage-progress', data: { percent: @test_passage.passage_progress } do %>
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar">
+        <%= @test_passage.passage_progress %> %
+      </div>
+    <% end %>
   </div>
 </div>
