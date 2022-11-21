@@ -1,0 +1,40 @@
+<div class="card border-primary">
+  <div class="card-body">
+    <%= form_with model: @feedback, local: true do |form| %>
+      <%= render 'shared/errors', resource: @feedback %>
+
+      <div class="form-group">
+        <p>
+          <%= form.label :email, t('helpers.label.user.email') %>
+          <%= form.email_field :email,
+                               autofocus: true,
+                               autocomplete: 'email',
+                               class: 'form-control',
+                               value: current_user.try(:email),
+                               required: true,
+                               pattern: '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i' %>
+        </p>
+
+        <p>
+          <%= form.label :first_name, t('helpers.label.user.first_name') %>
+          <%= form.text_field :first_name, class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= form.label :last_name, t('helpers.label.user.last_name') %>
+          <%= form.text_field :last_name, class: 'form-control' %>
+        </p>
+
+        <p>
+          <%= form.label :body, t('helpers.label.feedbacks.body') %>
+          <%= form.text_area :body, class: 'form-control', required: true %>
+        </p>
+
+        <p>
+          <%= form.submit t('.send_feedback'), class: "btn btn-success" %>
+          <%= link_to t('links.back'), root_path, class: "btn btn-primary" %>
+        </p>
+      </div>
+    <% end %>
+  </div>
+</div>
