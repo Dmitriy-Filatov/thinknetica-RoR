@@ -4,14 +4,13 @@ class FeedbacksController < ApplicationController
   respond_to :html
 
   def new
-    @feedback = Feedback.new
   end
 
   def create
-    @feedback = Feedback.new(feedback_params)
+    email = feedback_params[:email]
 
-    if @feedback.valid?
-      FeedbacksMailer.with(email: @feedback.email).send_feedback(@feedback).deliver_now
+    if feedback_params[:body].present? && email.present? && URI::MailTo::EMAIL_REGEXP.match?(email)
+      FeedbacksMailer.with(email: email).send_feedback(feedback_params).deliver_now
       redirect_to root_path, notice: t('.success')
     else
       flash.now[:alert] = t('.failure')
