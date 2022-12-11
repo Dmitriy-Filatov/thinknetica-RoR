@@ -1,10 +1,8 @@
-<tbody>
-  <tr>
-    <td class="font-weight-bold"><%= test.title %></td>
-    <td><%= test_level(test) %></td>
-    <td><%= test.questions.count %></td>
-        <% if test.questions.present? %>
-          <td><%= button_to t('.start_button'), start_test_path(test), class: 'btn btn-primary' %></td>
-        <% end %>
-  </tr>
-</tbody>
+<tr class="text-center">
+  <td><%= test.id %></td>
+  <td><%= test.title %></td>
+  <td><%= test.level %></td>
+  <td><%= test.category.title %></td>
+  <td><%= test.questions.count %></td>
+  <td><%= button_to t('.start_button'), start_test_path(test), class: 'btn btn-secondary' %></td>
+</tr>
