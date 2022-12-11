@@ -1,0 +1,19 @@
+<h1>Обратная связь с ресурса TestGuru</h1>
+
+<% if @feedback.first_name.present? || @feedback.last_name.present? %>
+  <h3>От:</h3>
+    <p>
+      <%= @feedback.first_name %>
+      <%= @feedback.last_name %>
+    </p>
+<% end %>
+
+<h3>Сообщение:</h3>
+  <p>
+    <%= @feedback.body %>
+  </p>
+
+<h3>Контактная информация:</h3>
+  <p>
+    <%= @feedback.email %>
+  </p>

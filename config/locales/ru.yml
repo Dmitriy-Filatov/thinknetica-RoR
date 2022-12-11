@@ -1,5 +1,5 @@
 ru:
-  hello: "Добро пожаловать!"
+  hello: 'Добро пожаловать!'
 
   data:
     email: 'Электронная почта'
@@ -9,96 +9,112 @@ ru:
     password_confirmation: 'Подтверждение пароля'
 
   links:
-    show: "Показать"
-    edit: "Изменить"
-    delete: "Удалить"
-    are_you_sure: "Вы уверены?"
-    back: "Назад"
-    log_in: "Вход"
-    log_out: "Выход"
-    sign_up: "Регистрация"
-    gist: "Ваша сслыка на GitHub Gist"
+    show: 'Показать'
+    edit: 'Изменить'
+    delete: 'Удалить'
+    are_you_sure: 'Вы уверены?'
+    back: 'Назад'
+    log_in: 'Вход'
+    log_out: 'Выход'
+    sign_up: 'Регистрация'
+    gist: 'Ваша сслыка на GitHub Gist'
+    feedback: 'Форма обратной связи / Напишите нам'
 
   nav:
-    project_title: "TestGuru"
-    admin_panel: "Панель Администратора"
-    greeting: "Привет, "
+    project_title: 'TestGuru'
+    admin_panel: 'Панель Администратора'
+    greeting: 'Привет, '
 
   warnings:
-    not_authorized: "Вы не авторизированы для просмотра этой страницы."
+    not_authorized: 'Вы не авторизированы для просмотра этой страницы.'
 
   users:
     sessions:
       create:
-        hello: "Привет, %{greeting}!"
+        hello: 'Привет, %{greeting}!'
 
   tests:
     index:
-      header: "Доступные Тесты"
-      title: "Название"
-      level: "Уровень"
-      questions: "Вопросы"
-      actions: "Действия"
+      header: 'Доступные Тесты'
+      title: 'Название'
+      level: 'Уровень'
+      questions: 'Вопросы'
+      actions: 'Действия'
     test:
-      start_button: "Старт"
+      start_button: 'Старт'
 
   test_passages:
     gist:
       success: 'Gist успешно создан! Перейти: %{url}'
       failure: 'Во время сохранения gist произошла ошибка!'
     show:
-      header: "Прохождение Теста: %{test_title}"
-      number: "Вопрос %{current} из %{total}."
-      gist_question: "Отправить в Gist"
+      header: 'Прохождение Теста: %{test_title}'
+      number: 'Вопрос %{current} из %{total}.'
+      gist_question: 'Отправить в Gist'
       next_button: 'Следующий'
     result:
-      header: "Вы прошли Тест: "
-      test_result: "Ваш результат прохождения теста:"
-      tests_button: "Главная страница с тестами"
-      success: "Вы прошли Тест успешно!"
-      failure: "Вы провалили Тест!"
+      header: 'Вы прошли Тест: '
+      test_result: 'Ваш результат прохождения теста:'
+      tests_button: 'Главная страница с тестами'
+      success: 'Вы прошли Тест успешно!'
+      failure: 'Вы провалили Тест!'
+
+  feedbacks:
+    create:
+      success: 'Отзыв был успешно отправлен!'
+      failure: 'Отзыв не был отправлен! Что-то пошло не так...'
+    form:
+      send_feedback: 'Отправить сообщение'
+    new:
+      your_feedback: 'Ваш отзыв :)'
 
   helpers:
     submit:
       test:
-        create: "Создать Тест"
-        update: "Обновить Тест"
+        create: 'Создать Тест'
+        update: 'Обновить Тест'
       question:
-        crete: "Создать Вопрос"
-        update: "Обновить Вопрос"
+        crete: 'Создать Вопрос'
+        update: 'Обновить Вопрос'
       answer:
-        crete: "Создать Ответ"
-        update: "Обновить Ответ"
+        crete: 'Создать Ответ'
+        update: 'Обновить Ответ'
     label:
       test:
-        title: "Название"
-        level: "Уровень"
-        category_id: "Категория:"
-        author_id: "Автор:"
+        title: 'Название'
+        level: 'Уровень'
+        category_id: 'Категория:'
+        author_id: 'Автор:'
       question:
-        body: "Текст Вопроса"
+        body: 'Текст Вопроса'
       answer:
-        body: "Текст Ответа"
-        correct: "Верно?"
+        body: 'Текст Ответа'
+        correct: 'Верно?'
+      feedbacks:
+        body: 'Текст сообщения'
     select:
-      prompt: "Выберите категорию"
+      prompt: 'Выберите категорию'
 
   shared:
     errors:
       header:
-        few: "Обнаружено %{count} ошибки:"
-        many: "Обнаружено %{count} ошибок:"
-        one: "Обнаружена %{count} ошибка:"
-        other: "Обнаружено %{count} ошибки:"
+        few: 'Обнаружено %{count} ошибки:'
+        many: 'Обнаружено %{count} ошибок:'
+        one: 'Обнаружена %{count} ошибка:'
+        other: 'Обнаружено %{count} ошибки:'
     footer:
-      git_hub_repo: "GitHub: "
-      author: "Автор: Дмитрий Ф."
-      project_link: "Тренировочный проект от школы Thinknetica"
+      git_hub_repo: 'GitHub: '
+      author: 'Автор: Дмитрий Ф.'
+      project_link: 'Тренировочный проект от школы Thinknetica'
 
   tests_mailer:
     completed_test:
-      subject: "Вы только что прошли тест на портале TestGuru!"
+      subject: 'Вы только что прошли тест на портале TestGuru!'
+
+  feedbacks_mailer:
+    send_feedback:
+      subject: 'Обратная связь от пользователя TestGuru'
 
   services:
     gist_question_service:
-      description:  "Вопрос из %{test_title} Теста из ресурса TestGuru"
+      description:  'Вопрос из %{test_title} Теста из ресурса TestGuru'
