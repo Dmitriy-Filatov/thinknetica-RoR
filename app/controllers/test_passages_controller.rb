@@ -37,7 +37,8 @@ class TestPassagesController < ApplicationController
   def gist_create(url)
     current_user.gists.create(
       question: @test_passage.current_question,
-      url:
+      gist_url: url,
+      user: current_user
     )
   end
 
