@@ -66,11 +66,13 @@ ActiveRecord::Schema.define(version: 2022_11_02_190013) do
     t.integer "level", default: 1, null: false
     t.bigint "category_id"
     t.bigint "author_id"
+    t.bigint "{:foreign_key=>{:to_table=>:users}}_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["author_id"], name: "index_tests_on_author_id"
     t.index ["category_id"], name: "index_tests_on_category_id"
     t.index ["title", "level", "category_id"], name: "index_tests_on_title_and_level_and_category_id", unique: true
+    t.index ["{:foreign_key=>{:to_table=>:users}}_id"], name: "index_tests_on_{:foreign_key=>{:to_table=>:users}}_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -109,5 +111,4 @@ ActiveRecord::Schema.define(version: 2022_11_02_190013) do
   add_foreign_key "test_passages", "tests"
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"
-  add_foreign_key "tests", "users", column: "author_id"
 end
