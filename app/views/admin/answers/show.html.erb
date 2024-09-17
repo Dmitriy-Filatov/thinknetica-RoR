@@ -1,19 +1,37 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
+    <h2 class="text-center"><b><%= t('.header') %></b></h2>
 
-<p>
-  <%= @answer.question.body %>
-</p>
+      <div class="card border-primary mb-1">
+        <div class="card-body">
+          <h6>
+            <b>
+              <%= @answer.question.body %>
+            </b>
+          </h6>
+        </div>
+      </div>
 
-<h2><%= t('.answer_label') %></h2>
+      <div class="card border-primary mb-2">
+        <div class="card-body">
 
-<p>
-  <%= @answer.body %>
-</p>
+          <div class="form-group">
+            <h6>
+              <b><%= t('.answer_label') %></b>
+              <%= @answer.body %>
+            </h6><br>
 
-<p>
-  <b><%= t('.correct_label') %></b>
-  <%= @answer.correct %>
-</p>
+            <p>
+              <b><%= t('.correct_label') %></b>
+              <%= @answer.correct %>
+            </p>
+            </div>
+        </div>
+      </div>
 
-<%= link_to t('.edit_answer_button'), edit_admin_answer_path %> |
-<%= link_to t('links.back'), admin_question_path(@answer.question) %>
+    <p>
+      <%= link_to t('.edit_answer_button'), edit_admin_answer_path, class: "btn btn-success" %>
+      <%= link_to t('links.back'), admin_question_path(@answer.question), class: "btn btn-primary" %>
+    </p>
+  </div>
+</div>

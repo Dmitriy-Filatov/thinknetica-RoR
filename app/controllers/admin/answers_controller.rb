@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Admin::AnswersController < Admin::BaseController
   before_action :set_question, only: %i[new create]
   before_action :set_answer, only: %i[show edit update destroy]
@@ -12,6 +14,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def create
     @answer = @question.answers.new(answer_params)
+
     if @answer.save
       redirect_to admin_answer_path(@answer), notice: t('.answer_created')
     else
@@ -43,6 +46,6 @@ class Admin::AnswersController < Admin::BaseController
   end
 
   def answer_params
-    params.require(:answer).permit(:boby, :correct)
+    params.require(:answer).permit(:body, :correct)
   end
 end

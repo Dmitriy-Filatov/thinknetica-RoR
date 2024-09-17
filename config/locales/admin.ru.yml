@@ -2,67 +2,76 @@ ru:
  admin:
     tests:
       create:
-        test_created: "Тест был успешно создан!"
+        test_created: 'Тест был успешно создан!'
       update:
-        test_updated: "Тест был успешно обновлен!"
+        test_updated: 'Тест был успешно обновлен!'
       destroy:
-        test_deleted: "Тест был успешно удален!"
+        test_deleted: 'Тест был успешно удален!'
       index:
-        header: "Доступные Тесты"
-        new_test_button: "Новый Тест"
-        title: "Название"
-        level: "Уровень"
-        questions: "Вопросы"
-        actions: "Действия"
-        gists_list: "Gists пользователей"
+        header: 'Доступные Тесты'
+        new_test_button: 'Новый Тест'
+        title: 'Название'
+        level: 'Уровень'
+        questions: 'Вопросы'
+        actions: 'Действия'
+        gists_list: 'Gists пользователей'
       show:
-        header: "Тест: %{title}"
-        level: "Уровень"
-        new_question_button: "Новый Вопрос"
-        questions_title: "Вопросы:"
-        edit_test_button: "Изменить Тест"
+        header: 'Тест: %{title}'
+        level: 'Уровень'
+        new_question_button: 'Новый Вопрос'
+        questions_title: 'Вопросы:'
+        edit_test_button: 'Изменить Тест'
       new:
-        header: "Создать Новый Тест"
+        header: 'Создать Новый Тест'
       edit:
-        header: "Редактировать Тест: %{title}"
+        header: 'Редактировать Тест: %{title}'
       form_inline:
         submit: 'Принять'
+      form:
+        create_test: 'Создать Тест'
     questions:
       create:
-        question_created: "Вопрос был успешно создан!"
+        question_created: 'Вопрос был успешно создан!'
       update:
-        question_updated: "Вопрос был успешно обновлен!"
+        question_updated: 'Вопрос был успешно обновлен!'
       destroy:
-        question_deleted: "Вопрос был успешно удален!"
+        question_deleted: 'Вопрос был успешно удален!'
       show:
-        header: "Вопрос из Теста: %{title}"
-        question_label: "Вопрос:"
-        new_answer_button: "Новый Ответ"
-        answers_label: "Ответы:"
-        edit_question_button: "Изменить Вопрос"
+        header: 'Вопрос из Теста: %{title}'
+        question_label: 'Вопрос:'
+        new_answer_button: 'Новый Ответ'
+        answers_label: 'Ответы:'
+        edit_question_button: 'Изменить Вопрос'
+      form:
+        create_question: 'Создать Вопрос'
       new:
-        header: "Создать Новый Вопрос для Теста: %{test_title}"
+        header: 'Создать Новый Вопрос для Теста: %{test_title}'
       edit:
-        header: "Редактировать Вопрос из Теста: %{test_title}"
+        header: 'Редактировать Вопрос из Теста: %{test_title}'
     answers:
       create:
-        answer_created: "Ответ был успешно создан!"
+        answer_created: 'Ответ был успешно создан!'
       update:
-        answer_updated: "Ответ был успешно обновлен!"
+        answer_updated: 'Ответ был успешно обновлен!'
       destroy:
-        answer_deleted: "Ответ был успешно удален!"
+        answer_deleted: 'Ответ был успешно удален!'
       show:
-        header: "Вопрос"
-        answer_label: "Ответ:"
-        correct_label: "Верно:"
-        edit_answer_button: "Изменить Ответ"
+        header: 'Вопрос'
+        answer_label: 'Ответ:'
+        correct_label: 'Верно:'
+        edit_answer_button: 'Изменить Ответ'
       new:
-        header: "Новый Ответ"
+        header: 'Новый Ответ'
       edit:
-        header: "Редактировать Ответ"
+        header: 'Редактировать Ответ'
+      form:
+        create_answer: 'Создать Ответ'
     gists:
       index:
-          header: "Gists пользователей"
-          gist_question: "Вопрос из Теста"
-          gist_link: "Ссылка на GitHub Gist"
-          gist_author: "Автор Gist"
+          header: 'Gists пользователей'
+          gist_question: 'Вопрос из Теста'
+          gist_link: 'Ссылка на GitHub Gist'
+          gist_author: 'Автор Gist'
+          gist_action: 'Действие'
+      destroy:
+        gist_deleted: 'Gist был успешно удален!'

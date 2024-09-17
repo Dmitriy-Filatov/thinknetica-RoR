@@ -1,5 +1,5 @@
 en:
-  hello: "Welcome!"
+  hello: 'Welcome!'
 
   data:
     email: 'Email'
@@ -9,94 +9,110 @@ en:
     password_confirmation: 'Confirm your password'
 
   links:
-    show: "Show"
-    edit: "Edit"
-    delete: "Delete"
-    are_you_sure: "Are you sure?"
-    back: "Back"
-    log_in: "Log in"
-    log_out: "Log out"
-    sign_up: "Sign up"
-    gist: "Your GitHub Gist link"
+    show: 'Show'
+    edit: 'Edit'
+    delete: 'Delete'
+    are_you_sure: 'Are you sure?'
+    back: 'Back'
+    log_in: 'Log in'
+    log_out: 'Log out'
+    sign_up: 'Sign up'
+    gist: 'Your GitHub Gist link'
+    feedback: 'Leave your Feedback / Proposal'
 
   nav:
-    project_title: "TestGuru"
-    admin_panel: "Admin Panel"
-    greeting: "Hello, "
+    project_title: 'TestGuru'
+    admin_panel: 'Admin Panel'
+    greeting: 'Hello, '
 
   warnings:
-    not_authorized: "You are not authorized to view this page."
+    not_authorized: 'You are not authorized to view this page.'
 
   users:
     sessions:
       create:
-        hello: "Hello, %{greeting}!"
+        hello: 'Hello, %{greeting}!'
 
   tests:
     index:
-      header: "Tricky Tests"
-      title: "Title"
-      level: "Level"
-      questions: "Questions"
-      actions: "Actions"
+      header: 'Tricky Tests'
+      title: 'Title'
+      level: 'Level'
+      questions: 'Questions'
+      actions: 'Actions'
     test:
-      start_button: "Start"
+      start_button: 'Start'
 
   test_passages:
     gist:
-      success: "Gist was successfully created! Go to: %{url}"
-      failure: "An error occurred while saving gist!"
+      success: 'Gist was successfully created! Go to: %{url}'
+      failure: 'An error occurred while saving gist!'
     show:
-      header: "Passing the Test: %{test_title}"
-      number: "The Question %{current} of %{total}."
-      gist_question: "Gist Question"
+      header: 'Passing the Test: %{test_title}'
+      number: 'The Question %{current} of %{total}.'
+      gist_question: 'Gist Question'
       next_button: 'Next'
     result:
-      header: "You have been completed the Test: "
-      test_result: "Your Test passage result is:"
-      tests_button: "Main page with Tests"
-      success: "You have been completed the Test successfully!"
-      failure: "You have been failed the Test!"
+      header: 'You have been completed the Test: '
+      test_result: 'Your Test passage result is:'
+      tests_button: 'Main page with Tests'
+      success: 'You have been completed the Test successfully!'
+      failure: 'You have been failed the Test!'
+
+  feedbacks:
+    create:
+      success: 'Feedback was sent successfully!'
+      failure: 'Feedback was not sent! Oooopss...something went wrong'
+    form:
+      send_feedback: 'Send message'
+    new:
+      your_feedback: 'Your feedback :)'
 
   helpers:
     submit:
       test:
-        create: "Create Test"
-        update: "Update Test"
+        create: 'Create Test'
+        update: 'Update Test'
       question:
-        crete: "Create Question"
-        update: "Update Question"
+        crete: 'Create Question'
+        update: 'Update Question'
       answer:
-        crete: "Create Answer"
-        update: "Update Answer"
+        crete: 'Create Answer'
+        update: 'Update Answer'
     label:
       test:
-        title: "Title"
-        level: "Level"
-        category_id: "Category:"
-        author_id: "Author:"
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category:'
+        author_id: 'Author:'
       question:
-        body: "Question text"
+        body: 'Question text'
       answer:
-        body: "Answer text"
-        correct: "Correct?"
+        body: 'Answer text'
+        correct: 'Correct?'
+      feedbacks:
+        body: 'Message text'
     select:
-      prompt: "Select a category"
+      prompt: 'Select a category'
 
   shared:
     errors:
       header:
-        one: "%{count} error detected:"
-        other: "%{count} errors detected:"
+        one: '%{count} error detected:'
+        other: '%{count} errors detected:'
     footer:
-      git_hub_repo: "GitHub: "
-      author: "Made by: Dmitriy F."
-      project_link: "Training project from Thinknetica"
+      git_hub_repo: 'GitHub: '
+      author: 'Made by: Dmitriy F.'
+      project_link: 'Training project from Thinknetica'
 
   tests_mailer:
     completed_test:
-      subject: "You just completed the TestGuru test!"
+      subject: 'You just completed the TestGuru test!'
+
+  feedbacks_mailer:
+    send_feedback:
+      subject: 'Feedback from TestGuru user'
 
   services:
     gist_question_service:
-      description:  "A question about %{test_title} Test from TestGuru"
+      description:  'A question about %{test_title} Test from TestGuru'
